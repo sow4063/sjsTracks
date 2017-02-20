@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const PATHS = {
+  client: path.resolve(__dirname, 'client'),
   app: path.resolve(__dirname, 'client', 'app'),
   dist: path.resolve(__dirname, 'dist')
 }
@@ -21,6 +22,9 @@ module.exports = env => {
       compress: true,
       port: 8080,
       https: false 
+    },
+    resolve: {
+      modules: [path.resolve(__dirname, 'client'), 'node_modules']
     },
     module: {
       rules: [
@@ -47,10 +51,10 @@ module.exports = env => {
     plugins: [
       new CopyWebpackPlugin([ 
         { 
-          from: path.resolve( PATHS.app, 'index.html' ) 
+          from: path.resolve( PATHS.client, 'index.html' ) 
         },
         { 
-          context: path.resolve( PATHS.app, `img` ),
+          context: path.resolve( PATHS.client, `img` ),
           from: `**/*`,
           to: path.resolve(PATHS.dist, `img`)
         } 
