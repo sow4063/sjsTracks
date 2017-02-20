@@ -1,0 +1,25 @@
+{
+  "name": "sjs-tracks",
+  "version": "0.0.1",
+  "description": "sjs music player platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjsTracks/sjsTracks.git"
+  },
+  "keywords": [
+    "music",
+    "player",
+    "angularjs",
+    "webpack"
+  ],
+  "author": "Seunghoon, Songei, Sulbum, Jongeik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjsTracks/sjsTracks/issues"
+  },
+  "homepage": "https://github.com/sjsTracks/sjsTracks#readme"
+}
