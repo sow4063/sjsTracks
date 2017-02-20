@@ -4,14 +4,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const PATHS = {
   client: path.resolve(__dirname, 'client'),
-  app: path.resolve(__dirname, 'client', 'app'),
   dist: path.resolve(__dirname, 'dist')
 }
 
 module.exports = env => {
   return {
     entry: {
-      app: path.resolve(PATHS.app, 'root.module.js')
+      app: path.resolve(PATHS.client, 'app', 'root.module.js')
     },
     output: {
       path: PATHS.dist,
