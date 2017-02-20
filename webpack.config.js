@@ -9,7 +9,7 @@ const PATHS = {
 module.exports = env => {
   return {
     entry: {
-      app: path.resolve(PATHS.app, 'root.module.js')
+      app: path.resolve(PATHS.app, 'root.component.js')
     },
     output: {
       path: PATHS.dist,
@@ -18,9 +18,13 @@ module.exports = env => {
     module: {
       rules: [
         {
-          test: /\.js/,
-          exclude: 'node_modules',
+          test: /\.js$/,
+          exclude: `/node_modules/`,
           use: `babel-loader`
+        },
+        {
+          test: /\.html$/,
+          use: [`ngtemplate-loader`, `html-loader`]
         }
       ]
     },
