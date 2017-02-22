@@ -1,5 +1,5 @@
 // grab the mongoose module
-var mongoose = require('../../db.config.js');
+var mongoose = require('../db.config.js');
 
 var userSchema = new mongoose.Schema({
   email : {
@@ -7,7 +7,7 @@ var userSchema = new mongoose.Schema({
   },
 
 	userflag : {
-		type : boolean, default: false
+		type : Boolean, default: false
 	},
 	
 	username : {

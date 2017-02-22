@@ -1,4 +1,4 @@
-var mongoose = require('../../db.config.js');
+var mongoose = require('../db.config.js');
 
 var songSchema = new mongoose.Schema({
   title : {
