@@ -19,7 +19,7 @@ module.exports = {
       click : req.body.click,
     };
 
-    updateSong( {title: req.query.title}, song, , {new: true} );
+    updateSong( {title: req.query.title}, song, {new: true} )
       .then(function(result) {
         if( result.length ) {
           console.log('update song!!! ::: ', result );

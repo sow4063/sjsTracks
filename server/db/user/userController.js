@@ -19,7 +19,7 @@ module.exports = {
       zipcode : req.body.zipcode
     };
 
-    updateUser( {email: req.query.email}, user, , {new: true} );
+    updateUser( {email: req.query.email}, user, {new: true} )
       .then(function(result) {
         if( result.length ) {
           console.log('update user!!! ::: ', result );
