@@ -1,7 +1,7 @@
 const express = require('express');
 const router = require('./server/routes/router.js');
 const methodOverride = require('method-override');
-const Multer = require('Multer');
+const Multer = require('multer');
 const bodyParser = require('body-parser');
 
 const app = express();
