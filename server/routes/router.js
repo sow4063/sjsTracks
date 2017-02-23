@@ -12,12 +12,28 @@ module.exports = function(app){
 	app.get('/search', function(req, res){
 
 	});
-	app.get('artistView', function(req, res){
+
+	app.get('/artistView', function(req, res){
 
 	});
+
 	app.get('/chart', function(req, res){
 
 	});
+
+	app.get('/artistInfo');
+
+	app.get('/userInfo');
+
+	app.get('/userInfo/cart');
+
+	app.get('/auth/google');
+
+	app.get('/auth/google/callback');
+
+	app.get('/logout');
+
+	app.get('/artistPage');
 
 
 
@@ -29,6 +45,7 @@ module.exports = function(app){
 	app.post('/signup', function(req, res){
 
 	});
+
 	app.post('/upload', function(req, res){
 
 	});
@@ -36,4 +53,6 @@ module.exports = function(app){
 	app.post('/login', function(req, res){
 
 	});
+
+	app.post('/userInfo/cart')
 }
