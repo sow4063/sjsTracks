@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html ng-app="root" lang="en">
+<html ng-app="sjsTrack">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="app.css">
-  <script src="app.js"></script>
+    <title>sjsTrack2</title>
+    <meta charset="utf-8">
+
+    <script src="angular.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-theme.css">
+    <script>
+        angular.module("sjsTrack", []);
+    </script>
+    <script src="controllers/sjsTracks.js"></script>
 </head>
-<body>
-  <root></root>
+<body ng-controller="sjsTrackCtrl">
+    <div class="nav">
+       
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                     <img src="image/logo.png">
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <span class="input-group">
+                                <input class="form-controll" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default">search</button>
+                                    가수<input type="radio" name="category">
+                                    노래<input type="radio" name="category">
+                                </span>
+                            </span>
+                        </li>
+                        <li class="active"><a href="chart/chart.html">chart</a></li>
+                        <li><a href="#">sign in</a></li>
+                        <li> <a href="sign-up/sign-up.html">sign up</a></li>
+                        <li class="active" ng-click="data.signInCheck()"><a href="#">my info</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </div class="mainview"><img src="image/main-image.png">
+    <div class="main-chart" ng-repeat="item in data.chart">
+        <h3>
+            <strong>{{item.artist}}</strong>
+            <span class="pull-right label label-primary">
+                {{item.rank}}
+            </span>
+        </h3>
+        <span>{{item.song}}</span>
+    </div>
 </body>
 </html>
